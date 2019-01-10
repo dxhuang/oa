@@ -14,11 +14,11 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 			throws Exception {
 		if ( request.getSession().getAttribute("user") ==null  ) {
 			// 未登录，拦截
-			System.out.println( "未登录，被拦截" );
+			//System.out.println( "未登录，被拦截" );
 			response.sendRedirect( request.getContextPath() + "/user/login");
 			return false;
 		} 
-		System.out.println( "已登录，放过" );
+		//System.out.println( "已登录，放过" );
 		return true;
 	}
 
